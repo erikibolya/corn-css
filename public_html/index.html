@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="public/css/normalize.css">
+        <link rel="stylesheet" href="public/css/main.css">
+    </head>
+    <body>
+        <input id="menu-controller" class="menu__controller menu__controller--main" type="checkbox">
+        <div class="menu">
+            <label for="menu-controller" class="menu__background"></label>
+            <span class="menu__container">
+                <input id="menu-content-6" class="menu__controller menu__controller--secondary" type="checkbox">
+                <span class="menu__content menu__content--secondary">
+                    <span class="menu__item menu__item--header">
+                        <span class="menu__breadcrumb">
+                            Children
+                        </span>
+                        <label class="menu__trigger menu__trigger--back" for="menu-content-6"></label>
+                    </span>
+                    <a href="#" class="menu__item">T-shirts</a>
+                    <a href="#" class="menu__item">Jeans</a>
+                    <a href="#" class="menu__item">Jackets</a>
+                </span>
+
+                <input id="menu-content-5" class="menu__controller menu__controller--secondary" type="checkbox">
+                <span class="menu__content menu__content--secondary">
+                    <span class="menu__item menu__item--header">
+                        <span class="menu__breadcrumb">
+                            June
+                        </span>
+                        <label class="menu__trigger menu__trigger--back" for="menu-content-5"></label>
+                    </span>
+                    <a href="#" class="menu__item">Nothing to see here</a>
+                </span>
+
+                <input id="menu-content-4" class="menu__controller menu__controller--secondary" type="checkbox">
+                <span class="menu__content menu__content--secondary">
+                    <span class="menu__item menu__item--header">
+                        <span class="menu__breadcrumb">
+                            2018
+                        </span>
+                        <label class="menu__trigger menu__trigger--back" for="menu-content-4"></label>
+                    </span>
+                    <a href="#" class="menu__item">January</a>
+                    <a href="#" class="menu__item">February</a>
+                    <a href="#" class="menu__item">March</a>
+                    <a href="#" class="menu__item">April</a>
+                    <a href="#" class="menu__item">May</a>
+                    <label class="menu__item menu__item--submenu" for="menu-content-5">June</label>
+                </span>
+
+                <input id="menu-content-3" class="menu__controller menu__controller--secondary" type="checkbox">
+                <span class="menu__content menu__content--secondary">
+                    <span class="menu__item menu__item--header">
+                        <span class="menu__breadcrumb">
+                            Women
+                        </span>
+                        <label class="menu__trigger menu__trigger--back" for="menu-content-3"></label>
+                    </span>
+                    <a href="#" class="menu__item">T-shirts</a>
+                    <a href="#" class="menu__item">Jeans</a>
+                    <a href="#" class="menu__item">Jackets</a>
+                </span>
+
+                <input id="menu-content-1" class="menu__controller menu__controller--secondary" type="checkbox">
+                <span class="menu__content menu__content--secondary">
+                    <span class="menu__item menu__item--header">
+                        <span class="menu__breadcrumb">
+                            Products
+                        </span>
+                        <label class="menu__trigger menu__trigger--back" for="menu-content-1"></label>
+                    </span>
+                    <a href="#" class="menu__item">Men</a>
+                    <label class="menu__item menu__item--submenu" for="menu-content-3">Women</label>
+                    <label class="menu__item menu__item--submenu" for="menu-content-6">Children</label>
+                    <a href="#" class="menu__item">Shoes</a>
+                    <a href="#" class="menu__item">Accesories</a>
+                </span>
+
+                <input id="menu-content-2" class="menu__controller menu__controller--secondary" type="checkbox">
+                <span class="menu__content menu__content--secondary">
+                    <span class="menu__item menu__item--header">
+                        <span class="menu__breadcrumb">
+                            Blog
+                        </span>
+                        <label class="menu__trigger menu__trigger--back" for="menu-content-2"></label>
+                    </span>
+                    <a href="#" class="menu__item">2019</a>
+                    <label class="menu__item menu__item--submenu" for="menu-content-4">2018</label>
+                </span>
+
+                <span class="menu__content menu__content--main">
+                    <span class="menu__item menu__item--header">
+                        <span class="menu__breadcrumb">
+                            Corn CSS
+                        </span>
+                        <label class="menu__trigger menu__trigger--close" for="menu-controller"></label>
+                    </span>
+                    <a href="#" class="menu__item">About us</a>
+                    <label class="menu__item menu__item--submenu" for="menu-content-1">Products</label>
+                    <label class="menu__item menu__item--submenu" for="menu-content-2">Blog</label>
+                    <a href="#" class="menu__item">Contacts</a>
+                </span>
+            </span>
+        </div>
+        <header class="header">
+            <div class="header__container">
+                <label for="menu-controller" class="header__menu shadow">
+                    <span class="shadow__element shadow__element--default" ></span>
+                    <span class="shadow__element shadow__element--hover"></span>
+                    <span class="hamburger">
+                        <span class="hamburger__line hamburger__line--first"></span>
+                        <span class="hamburger__line hamburger__line--second"></span>
+                        <span class="hamburger__line hamburger__line--third"></span>
+                    </span>
+                </label>
+            </div>
+        </header>
+
+        <main class="main">
+            <h1 class="main__heading heading heading--1">
+                Corn CSS
+            </h1>
+            <section class="section" id="conventions">
+                <h2 class="section__heading heading heading--2">
+                    Conventions
+                </h2>
+                <div class="section__description">
+                    Corn CSS has no strict uses.
+                </div>
+                <div class="section__description">
+                    Function <b>rem()</b> helps with calculations as follows.
+                </div>
+                <div class="example example--code">
+                    <pre class="example__pre">.class{ font-size: rem(20); }</pre>
+                </div>
+                <div class="section__description">
+                    generates
+                </div>
+                <div class="example example--code">
+                    <pre class="example__pre">.class{ font-size: 1.25rem; }</pre>
+                </div>
+            </section>
+            <section class="section">
+                <h2 class="section__heading heading heading--2">
+                    Typography
+                </h2>
+                <div class="section__description">
+                    Typography across all the framework is defined by <b>rem</b> and <b>em</b>
+                    units and is completely fluid. Font size of body is set to <b>100%</b> so 
+                    <b>1 rem</b> is <b>16 px</b> <i>(browser sets default font size as 16px,
+                        if user manipulates this value and sets it to 18px, 1rem will equals 18px)</i>.
+                </div>
+                <div class="section__description">
+                    Function <b>rem()</b> helps with calculations as follows.
+                </div>
+                <div class="example example--code">
+                    <pre class="example__pre">.class{ font-size: rem(20); }</pre>
+                </div>
+                <div class="section__description">
+                    generates
+                </div>
+                <div class="example example--code">
+                    <pre class="example__pre">.class{ font-size: 1.25rem; }</pre>
+                </div>
+            </section>
+            <section class="section">
+                <h2 class="section__heading h2">
+                    Headings
+                </h2>
+                <div class="example">
+                    <h1 class="heading heading--1">
+                        Level 1
+                    </h1>
+                    <h2 class="heading heading--2">
+                        Level 2
+                    </h2>
+                    <h3 class="heading heading--3">
+                        Level 3
+                    </h3>
+                    <h4 class="heading heading--4">
+                        Level 4
+                    </h4>
+                    <h5 class="heading heading--5">
+                        Level 5
+                    </h5>
+                    <h6 class="heading heading--6">
+                        Level 6
+                    </h6>
+                </div>
+                <p class="section__description">
+                    6 Level of heading sizes are used. All are modifyable in libs/_variables.scss and used by heading($size); mixin 
+                </p>
+            </section>
+            <section class="section">
+                <h2 class="section__heading h2">
+                    Material - Shadows
+                </h2>
+                <div class="example">
+                    <div class="example__block">
+
+                    </div>
+                </div>
+                <p class="section__description">
+                    6 Level of heading sizes are used. All are modifyable in libs/_variables.scss and used by heading($size); mixin 
+                </p>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,217 @@
+$material-form-border-radius-base: 2px;
+$material-form-unfocused-color: $material-color-grey-500;
+$material-form-focused-color:$material-color-blue-500;
+$material-form-succes-color: $material-color-green-500;
+$material-form-warning-color: $material-color-orange-500;
+$material-form-danger-color: $material-color-red-500;
+$material-form-font-size: 15px;
+$material-form-border-width: 1px;
+
+.material-field{
+    color: $material-form-unfocused-color;
+    margin-bottom: $material-form-font-size*2;
+    font-size: $material-form-font-size;
+    position: relative;
+    padding-top: $material-form-font-size;
+
+    &.icon{
+        padding-left: 2.5*$material-form-font-size;
+        label{
+            left: 2.5*$material-form-font-size;
+        }
+    }
+
+
+    &.warning{
+        > .material-input{
+            border-color: $material-form-warning-color !important;
+            &:focus{
+                @include box-shadow(0 1px 0 0 $material-form-warning-color);
+                & ~ label{
+                    color: $material-form-warning-color;
+                }
+                & ~ i{
+                    color: $material-form-warning-color;
+                }
+            }
+        }
+        > .material-textarea{
+            border-color: $material-form-warning-color !important;
+            & ~ label{
+                color: $material-form-warning-color !important;
+            }
+            & ~ i{
+                color: $material-form-warning-color;
+            }
+        }
+        > .material-message{
+            color: $material-form-warning-color;
+        }
+    }
+
+    &.danger{
+        > .material-input{
+            border-color: $material-form-danger-color !important;
+            &:focus{
+                @include box-shadow(0 1px 0 0 $material-form-danger-color );
+                & ~ label{
+                    color: $material-form-danger-color;
+                }
+                & ~ i{
+                    color: $material-form-danger-color;
+                }
+            }
+        }
+        > .material-textarea{
+            border-color: $material-form-danger-color !important;
+            & ~ label{
+                color: $material-form-danger-color !important;
+            }
+            & ~ i{
+                color: $material-form-danger-color;
+            }
+        }
+        > .material-message{
+            color: $material-form-danger-color;
+        }
+    }
+
+    &.success{
+        > .material-input{
+            border-color: $material-form-succes-color !important;
+            &:focus{
+                @include box-shadow(0 1px 0 0 $material-form-succes-color);
+                & ~ label{
+                    color: $material-form-succes-color;
+                }
+                & ~ i{
+                    color: $material-form-succes-color;
+                }
+            }
+        }
+        > .material-textarea{
+            border-color: $material-form-succes-color !important;
+            & ~ label{
+                color: $material-form-succes-color !important;
+            }
+            & ~ i{
+                color: $material-form-succes-color;
+            }
+        }
+        > .material-message{
+            color: $material-form-succes-color;
+        }
+    }
+
+    > .material-input{
+        padding: 0;
+        outline: none;
+        line-height: 2;
+        border: none;
+        display: block;
+        width: 100%;
+        background-color: transparent;
+        border-bottom: 1px solid $material-form-unfocused-color;
+        @include transition(all 300ms linear);
+        &:focus{
+            border-color: $material-form-focused-color;
+            @include box-shadow(0 1px 0 0 $material-form-focused-color);
+            & ~ label{
+                color: $material-form-focused-color;
+            }
+            & ~ i{
+                color: $material-form-focused-color;
+            }
+        }
+    }
+
+    > .material-textarea{
+        margin-top: (-1) *  $material-form-font-size;
+        padding: (1.5)*$material-form-font-size $material-form-font-size/2 $material-form-font-size/2 $material-form-font-size/2;
+        width: 100%;
+        resize: none;
+        outline: none;
+        border: none;
+        display: block;
+        background-color: transparent;
+        border: 1px solid $material-form-unfocused-color;
+        @include border-radius($material-form-border-radius-base);
+        @include transition(all 300ms linear);
+
+        &:focus{
+            border-color: $material-form-focused-color;
+            @include transition(all 300ms linear);
+            & ~ label{
+                color: $material-form-focused-color;
+                @include transition(color 300ms linear);
+            }
+            & ~ i{
+                color: $material-form-focused-color;
+            }
+        }
+
+        & ~ label{
+/*            background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+            background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+            background-image: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(255, 255, 255, 1)), to(rgba(255, 255, 255, 0)));
+            background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+            background-image: -o-linear-gradient(left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+            background-image: linear-gradient(left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+            background-repeat: repeat-x;*/
+            top: $material-form-border-width;
+            left: $material-form-border-width;
+            color: $material-form-unfocused-color;
+            padding-left: $material-form-font-size/2;
+            padding-top: $material-form-font-size/2;
+            padding-bottom: $material-form-font-size/2;
+            display: block !important;
+            width: 100%;
+        }
+
+
+    }
+
+    > label{
+        color: $material-form-unfocused-color;
+        position: absolute;
+        left: 0;
+        top: 0;
+        line-height: 1;
+        @include transition(color 300ms linear);
+        &.center{
+            text-align: center;
+        }
+        &.right{
+            text-align: right;
+        }
+    }
+
+    > .material-message{
+        margin-top: 5px;
+        line-height: 1.2;
+        display: block;
+        width: 100%;
+        font-size: $material-form-font-size* 0.7;
+        &.center{
+            text-align: center;
+        }
+        &.right{
+            text-align: right;
+        }
+    }
+
+    i{
+        left: 0;
+        top: $material-form-font-size;
+        @include transition(color 300ms linear);
+        position: absolute;
+        font-size: 2*$material-form-font-size;
+    }
+
+
+}
+
+
+
+
+

@@ -1,0 +1,106 @@
+$material-alert-border-radius-base: 2px;
+$material-alert-background-color: rgba(0,0,0,0.4);
+$material-alert-content-background-color: $material-color-grey-100;
+$material-alert-font-size: 15px;
+
+$material-alert-font-color: $material-color-grey-500;
+$material-alert-primary-color:$material-color-blue-500;
+$material-alert-success-color: $material-color-green-500;
+$material-alert-warning-color: $material-color-orange-500;
+$material-alert-danger-color: $material-color-red-500;
+
+$material-form-border-width: 1px;
+
+.material-alert-checkbox{
+    display: none;
+    & + .material-alert{
+        display: flex;
+    }
+    &:checked + .material-alert{
+        display: none;
+    }
+}
+.material-alert{
+    color: $material-alert-font-color;
+    z-index: 2147483647;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+    background-color: $material-alert-background-color;
+
+
+    &-content{
+        text-align: center;
+        padding: 10px 10px;
+        align-self: center;
+        background-color: $material-alert-content-background-color;
+        width: 300px;
+        @include border-radius($material-alert-border-radius-base);
+        &-heading{
+            text-align: left;
+            color: $material-alert-primary-color;
+            margin-bottom: 20px;
+            font-size: $material-alert-font-size *2;
+        }
+        &-message{
+            text-align: left;
+            font-size: $material-alert-font-size;
+            margin-bottom: 20px;
+        }
+        &-close{
+            cursor: pointer;
+            margin: 0 auto;
+            padding: 0 20px;
+            line-height: 2;
+            color: $material-color-white;
+            width: auto;
+            display: inline-block;
+            background-color: $material-alert-primary-color;
+            @include border-radius($material-alert-border-radius-base);
+        }
+    }
+
+    &.warning{
+        .material-alert-content{
+            &-heading{
+                color: $material-alert-warning-color;
+            }
+            &-close{    
+                background-color: $material-alert-warning-color;
+            }
+        }
+    }
+
+    &.danger{
+        .material-alert-content{
+            &-heading{
+                color: $material-alert-danger-color;
+            }
+            &-close{    
+                background-color: $material-alert-danger-color;
+            }
+        }
+    }
+
+    &.success{
+        .material-alert-content{
+            &-heading{
+                color: $material-alert-success-color;
+            }
+            &-close{    
+                background-color: $material-alert-success-color;
+            }
+        }
+    }
+
+
+}
+
+
+
+
+

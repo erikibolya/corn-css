@@ -1,0 +1,42 @@
+@import "_variables.scss";
+
+.example{
+    padding: 1em;
+    position: relative; 
+    width: 100%; 
+    margin-bottom: 1em;
+    color: $material-color-grey-700;
+    &:hover{
+        & .example__shadow{
+            opacity: 0;
+        }
+        & .example__shadow--hover{
+            opacity: 1;
+        }
+    }
+    &--code{
+        @include border-radius(rem(4));
+        background-color: $material-color-grey-300;
+        @include material-box-shadow(2);
+    }
+}
+
+.example__pre{
+    margin: 0;
+    @include fluid-font(xs);
+}
+
+.example__shadow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include material-box-shadow(1);
+    transition-property: opacity;
+    transition-duration: 500ms;
+    &.example__shadow--hover{
+        @include material-box-shadow(5);
+        opacity: 0;
+    }
+}

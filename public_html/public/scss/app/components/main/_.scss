@@ -1,0 +1,12 @@
+@import "_variables.scss";
+
+
+.main{
+    @include container;
+    flex-direction: column;
+    @include linear-interpolation-chain(padding-top, $header-heights);
+}
+
+.main__heading{
+    text-align: center;
+}
